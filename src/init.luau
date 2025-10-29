@@ -137,6 +137,21 @@ function module.map<K, V, U>(
     return mappedTable
 end
 
+function module.transform<K, V, NK, NV>(
+    table: { [K]: V },
+    callback: (key: K, value: V) -> (NK, NV)
+): { [NK]: NV }
+    local transformedTable: { [NK]: NV } = {}
+
+    for key, value in next, table, nil do
+        local newKey, newValue = callback(key, value)
+        
+        transformedTable[newKey] = newValue
+    end
+
+    return transformedTable
+end
+
 function module.filter<K, V>(
     table: { [K]: V },
     callback: (key: K, value: V) -> boolean
