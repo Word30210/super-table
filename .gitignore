@@ -1,22 +1,6 @@
-# Roblox Studio files
-*.rbxl
-*.rbxlx
-*.rbxm
-*.rbxmx
+# pesde packages
+*_packages
+.pesde
 
-# Darklua build files
-./.builded_src
-./.builded_test
-
-# lock files
-*.lock
-
-# rojo files
-aftman.toml
-sourcemap.json
-
-# test files
-/test/*
-!/test/*.shared.client.luau
-!/test/*.shared.server.luau
-!/test/*.shared.luau
+# multitarget build output
+dist*

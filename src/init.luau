@@ -1,13 +1,6 @@
---#[ Head Variables ]#--
 local module = {}
-
---#[ Variables ]#--
 local _table = table
 
---#[ Functions ]#--
---
-
---#[ Main ]#--
 function module.keys<K>(
     table: { [K]: any }
 ): { K }
